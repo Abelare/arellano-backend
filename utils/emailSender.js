@@ -1,7 +1,7 @@
 const sgMail = require('@sendgrid/mail');
 
 // Reemplaza con tu clave API real de SendGrid
-sgMail.setApiKey('***REMOVED***o-oxSY9USxCYthYBaU8T4w.mx95XuBPm2Hiu7xMDN9CH0pVQLpOCOnWslDQwTrFzyc');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const sendEmail = async (to, subject, nombre, monto, metodo, referencia) => {
   const htmlContent = `
